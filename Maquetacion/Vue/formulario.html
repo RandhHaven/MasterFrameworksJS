@@ -4,22 +4,6 @@
         <meta charset="utf-8" />
         <title> Maquetacion React </title>
         <link rel="stylesheet" href="../Maquetacion/assets/CSS/styles.css">
-
-        <script type="text/javascript">
-            window.addEventListener("load", function(){
-                var artTemplate = document.getElementById("article-template");               
-                var articles = document.getElementById("articles");
-                for(var i = 1; i <= 5; i++){
-                    var templateClonado = artTemplate.cloneNode(true);
-                    templateClonado.removeAttribute("id");
-                    var h2Tag = templateClonado.getElementsByTagName("h2")[0];
-                    h2Tag.innerHTML = h2Tag.textContent + ' ' + i;
-                    console.log(templateClonado);
-                    articles.appendChild(templateClonado);
-                }
-            });               
-        </script>
-
     </head>
     <body>
         <header id="header">
@@ -48,29 +32,34 @@
                 <div class="clearFix"></div>
             </div>
         </header>
-        <div id="slider" class="slider-big">
-            <h1>Este es parte del slider</h1>
-        </div>
 
         <div class="center">
             <section id="content">
-                <h2 class="subheader">Ultimos Articulos</h2>
-                <div id="articles">
-                    <article id="article-template" class="article-item">
-                        <div class="image-wrap">
-                            <img src="../Maquetacion/Images/descarga.jpg" alt="Paisaje">
-                        </div>
-                        <h2>Articulos de Prueba</h2>
-                        <span class="date">
-                            Hace 5 minutos
-                        </span>
-                        <!--Limpiar FLOATS-->
-                         <div class="clearFix"></div>
-                    </article>
-                </div>               
+               <h1 class="subheader">Formulario</h1>
+               <form class="mid-form">
+                    <div class="form-group">
+                        <label for="nombre" >Nombre</label>
+                        <input type="text" name="nombre"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido" >Apellido</label>
+                        <input type="text" name="apellido"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="bio" >Biografia</label>
+                        <textarea name="bio"></textarea>
+                    </div>
+                    <div class="form-group radiobuttons">
+                        <input type="radio" name="genero"/> Hombre
+                        <input type="radio" name="genero"/> Mujer
+                        <input type="radio" name="genero"/> Otro
+                    </div>
+                    <!--Limpiar FLOATS-->
+                    <div class="clearFix"></div>
+                    <input type="submit" class="btn btn-success"/>
+               </form>
             </section>
 
-           
             <aside id="sidebar">
                 <div id="nav-blog" class="sidebar-item">
                     <h3> Creador </h3>
@@ -93,4 +82,5 @@
             </p>
         </footer>
     </body>
+   
 </html>

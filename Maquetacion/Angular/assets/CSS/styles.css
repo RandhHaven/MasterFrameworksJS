@@ -190,12 +190,13 @@ body {
 
 input[type="text"],
 textarea{
-    width: 100%;
+    width: 90%;
     height: 25px;
     border: 1px solid #ccc;
     padding: 5px;
     margin-bottom: 5px;
     transition: 300ms all;
+    text-align: center;
 }
 
 input[type="text"]:focus,
@@ -298,3 +299,85 @@ textarea{
     margin-bottom: 10px;
     float: left;
 }
+
+/*Responsive*/
+@media(max-width:1180px){
+    .center{
+        width: 90%;
+    }
+}
+
+@media(max-width:980px){    
+    #logo{
+        float: none;
+        width: 300px;
+        margin: 0px auto;
+        margin-top: 10px;
+    }
+    #menu,
+    #menu ul{
+        clear: both;
+        float: none;
+        width: 100%;
+        margin: 0px;
+        padding: 0%;
+    }
+}
+
+@media(max-width:500px){    
+    #logo{
+        float: none;
+        width: 300px;
+        margin: 0px auto;
+        margin-top: 10px;
+    }
+    #menu,
+    #menu ul{
+        clear: both;
+        float: none;
+        width: 100%;
+        margin: 0px;
+        padding: 0%;
+    }
+    #content{
+        float: none;
+    }
+}
+
+@media(max-width:1130px){    
+    #logo{
+        float: none;
+        width: 240px;
+        margin: 0px auto;
+        margin-top: 10px;
+    }
+    #menu,
+    #menu ul{
+        clear: both;
+        float: none;
+        width: 100%;
+        margin: 0px;
+        padding: 0%;
+    }
+    #content{
+        float: none;
+    }
+}
+
+@media(max-width:1314px){    
+   .center{
+        width: 95%;
+   }
+   #menu ul{
+        width: auto;
+   }
+}
+
+@media(max-width:497px){    
+    #header{
+         min-height: 130px;
+    }
+    #menu ul{
+         width: auto;
+    }
+ }
